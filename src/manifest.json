@@ -27,5 +27,6 @@
     "background": {
         "page": "background.html",
         "persistent": true
-    }
+    },
+    "options_page": "options.html"
 }

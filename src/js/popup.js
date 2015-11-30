@@ -1,6 +1,6 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     var bg = chrome.extension.getBackgroundPage();
-    var tieba = bg.tieba;
+    var tieba = bg.TiebaNotify;
     var numbers = tieba.numbers;
     var links = tieba.links;
 

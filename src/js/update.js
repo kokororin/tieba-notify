@@ -1,3 +1,4 @@
+//软件版本更新提示
 var manifest = chrome.runtime.getManifest();
 var previousVersion = localStorage.getItem("version");
 if (previousVersion == "" || previousVersion != manifest.version) {
@@ -10,5 +11,3 @@ if (previousVersion == "" || previousVersion != manifest.version) {
     showNotification(opt);
     localStorage.setItem("version", manifest.version);
 }
-
-TiebaNotify.init();
