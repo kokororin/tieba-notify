@@ -1,19 +1,12 @@
 var TiebaNotify = {
 
-    time: 25000,
+    time: 2000,
     userinfo: null,
     numbers: null,
     sum: 0,
     links: null,
     firstRun: true,
     isLogin: false,
-    type: {
-        0: ['fans', '新粉丝'],
-        3: ['replyme', '新回复'],
-        4: ['feature', '新精品'],
-        8: ['atme', '@到我'],
-        9: ['recycle', '回收站提醒'],
-    },
 
     getUserInfo: function() {
         var that = this;
@@ -33,7 +26,8 @@ var TiebaNotify = {
                         "http://tieba.baidu.com/i/sys/jump?u=" + that.userinfo.data.user_portrait + "&type=replyme",
                         "http://tieba.baidu.com/i/sys/jump?u=" + that.userinfo.data.user_portrait + "&type=feature",
                         "http://tieba.baidu.com/i/sys/jump?u=" + that.userinfo.data.user_portrait + "&type=atme",
-                        "http://tieba.baidu.com/pmc/recycle"
+                        "http://tieba.baidu.com/pmc/recycle",
+                        "https://passport.baidu.com/v2/?login"
                     ];
                 } catch (e) {
                     message = "user format error.";
@@ -108,6 +102,7 @@ var TiebaNotify = {
     },
     init: function() {
         var that = this;
+        that.time = parseInt(getOption('time')) * 100;
         that.process();
         setInterval(function() {
             that.process();

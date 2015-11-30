@@ -132,10 +132,6 @@ ul, li {
     box-shadow: inset 0 4px 2px -3px rgba(0, 0, 0, .2);
 }
 
-#ad_opacity {
-    width: 280px
-}
-
 input[type="color"] {
     height: 15px;
     width: 100px;
@@ -198,18 +194,8 @@ input[type="color"] {
     cursor: default
 }
 
-.ad, .rel_search {
-    width: 100px
-}
-
 .btn, .time {
     width: 160px
-}
-
-.little_opt {
-    font-size: 18px!important;
-    line-height: 30px;
-    height: 30px;
 }
 
 #about {

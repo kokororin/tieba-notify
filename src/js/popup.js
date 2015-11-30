@@ -4,7 +4,13 @@ jQuery(document).ready(function($) {
     var numbers = tieba.numbers;
     var links = tieba.links;
 
-    var items = ['fans', 'replyme', 'feature', 'atme', 'recycle'];
+    if (tieba.isLogin) {
+        $('#unlogined').hide();
+    } else {
+        $('#logined').hide();
+    }
+
+    var items = ['fans', 'replyme', 'feature', 'atme', 'recycle', 'login'];
     for (var i = 0; i < items.length; i++) {
         setNumber(items[i], numbers[i]);
         setLink(items[i], links[i]);
